@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'CookieRun';
+    src: url('fonts/CookieRun Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; /* avoids invisible text while loading */
+}
+
+@font-face {
+    font-family: 'CookieRun';
+    src: url('fonts/CookieRun Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CookieRun';
+    src: url('fonts/CookieRun Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    font-family: 'CookieRun', 'Courier New', monospace;
+    background-color: #222222;
+    color: #faf3e1;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* Container */
+.Container {
+    max-width: 1200px;
+    margin: 100px auto 90px;
+    padding: 0 35px;
+}
+
+.title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 1000;
+    margin-bottom: 50px;
+}
+
+.short-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.wrapper { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px; 
+}
+
+.cards {
+    background-color: #1f1f1f;
+    border: solid 2px lightgray;
+    width: 340px;  
+    height: 410px; 
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cards:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Card image */
+.cat {
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+/* Label of images */
+.cat-label {
+    font-size: 18px;
+    font-weight: 900;
+    color: #faf3e1;
+    letter-spacing: 0.5px;
+}
+
+.cards:hover .cat-label {
+    color: #ff6e1f;
+}
+
+/* Category images */
+.books {
+    background-image: url('images/FC/PJ_LastOlympian.png');
+}
+
+.caps {
+    background-image: url('images/FC/StussyGreen.png');
+}
+
+.jackets {
+    background-image: url('images/LS/Hoodie_Item/HoodieFront_CloseUpShot.png');
+}
+
+.plushies {
+    background-image: url('images/FC/MLP_Pinkie.png');
+}
+
+.fans {
+    background-image: url('images/RC/GreenFan_CloseUP.jpg');
+}
+
+.fragrance {
+    background-image: url('images/MW/BathAndBodyWorksMist_WideShot.png');
+}
+
+.upperwear {
+    background-image: url('images/FC/RedGoldenLionPolo.png');
+}
+
+.downwear {
+    background-image: url('images/LS/Underwear_Item/UnderwearFront_CloseUpShot.png');
+}
+
+.exclusive {
+    background-image: url('images/LS/Autograph_Item/AutographFront_CloseUpShot.png');
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cat {
+        height: 220px;
+    }
+
+    .page-title {
+        font-size: 30px;
+    }
+
+    .cards {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.site-footer {
+    background: #1f1f1f;
+    color: #fff;
+    padding: 18px 78px;
+    text-align: center;  
+    height: 120px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.site-footer .contacts {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+    gap: 10px;
+}
+
+.site-footer .contacts2 {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.contact-item {
+    white-space: nowrap;   
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #151515;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    transform: translateY(-1px);
+}
+
+.social-icon.instagram:hover {
+    background-color: #E1306C;
+}
+
+.social-icon.facebook:hover {
+    background-color: #1877F2;
+}
+                
